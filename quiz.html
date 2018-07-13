@@ -1,70 +1,38 @@
 <!--- Author: Guadalupe Delgado
       Date: 6/26/18 --->
 
-<!doctype html> <head> <title>Quiz</title> <link href="css/style.css"
-rel="stylesheet" type="text/css"> </head> <body>
+<!doctype html>
+<html>
+    <head>
+        <title>Quiz</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+    </head>
 
+    <body>
+        <header>
+            <div>
+                <a href="index.html"><img style="float:left" src="images/paw_print.png" alt="Logo" width="40" height="40"><h4 class="logo">PUPPYPICKER</h4></img></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="dogbreeds.html">DOG BREEDS</a></li>
+                    <li> <a href="about.html">ABOUT US</a></li>
+                </ul>
+            </nav>
+        </header>
 
-<div class="header">
-
-<a href="index.html"><img style="float:left" src="images/paw_print.png" alt="Logo" width="40" height="40"><h4 class="logo">PUPPYPICKER</h4></img></a>
-
-</div>
-
-<div class="container">
-<header> <a href="">
-
-</a>
-    <nav>
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="dogbreeds.html">DOG BREEDS</a></li>
-        <li> <a href="about.html">ABOUT US</a></li>
-      </ul>
-    </nav>
-  </header>
-
-<!-- Hero Section -->
-  <div style="text-align:justify">
-  <h2>Quiz Form</h2>
-	</div>
-	<div style="text-align:justify">
-		<div style="font-weight: bold">
-
-    <h3>How large is your living space?</h3>
-    
-    <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
-        <label for="question-1-answers-A">A) I live in a small house/apartment, with no yard or easy access to outdoor space. </label>
-    </div>
-    
-    <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
-        <label for="question-1-answers-B">B) I live in a house/apartment with plenty of space, with no easy access to outdoor space.</label>
-    </div>
-    
-    <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
-        <label for="question-1-answers-C">C) I live in a small house/apartment, with easy access to outdoor space.</label>
-    </div>
-    
-    <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" />
-        <label for="question-1-answers-D">D) I live in a house/apartment with plenty of space, with easy access to outdoor space.</label>
-    </div>
-
-	
-
-			
-<br>
-<br>
-<br>
-			
-<!-- Copyrights Section -->
-<div class="copyright">&copy;2018 - <strong>PuppyPicker</strong></div>
-</div>
-<!-- Main Container Ends -->
-</body>
-</html>
-
+        <div class="container">
+            <!-- Quiz Questions -->
+            <h2 style="text-align:center">Quiz</h2>
+            <div id="quiz"></div>
+            <button id="submit">Submit Quiz</button>
+            <!-- Quiz Results -->
+            <div id="results"></div>
+        </div>
+        <footer>
+            <!-- Copyrights Section -->
+            <div class="copyright">&copy;2018 - <strong>PuppyPicker</strong></div>
+        </footer>
+    </body>
 </html>
