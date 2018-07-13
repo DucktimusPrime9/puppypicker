@@ -55,6 +55,25 @@ footer {
     text-decoration: none;
     color: cyan;
 }
+.question{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+#submit{
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #006C6C;
+    color: #fff;
+    border: 0px;
+    border-radius: 15px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#submit:hover{
+    background-color: #00A5A5;
+}
+
 .logo {
     color: #fff;
     font-weight: bold;
