@@ -31,18 +31,20 @@
     function showResults() {
         // Get answer containers from quiz
         const answerContainers = quizContainer.querySelectorAll(".answers");
-        // Keep track overal score
-        let score = 0;
 
         questions.forEach((currentQuestion, questionNumber) => {
             // Find selected answer
             const answerContainer = answerContainers[questionNumber];
             const selector = `input[name=question${questionNumber}]:checked`;
             const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+            const pointContainers = quizContainer.querySelectorAll(".points");
+            const scoreContainers = pointContainers[userAnswer];
 
-            if(userAnswer===currentQuestion.correctAnswer){
-                score++; // add to the number to score
-              }
+            // for (breed key in scoreContainers) {
+            //     scores[breed] += scoreContainers[breed];
+            // }
+
+
             }
         );
     }
@@ -52,8 +54,11 @@ const quizContainer = document.getElementById("quiz");
 const resultsContainer = document.getElementById("results");
 const submitButton = document.getElementById("submit");
 
+var scores = { corgi: 0, bernese: 0, german: 0, stzu: 0, american: 0, golden: 0, terrier: 0, labrador: 0, beagle: 0, havanese: 0, spaniel: 0, bulldog: 0, husky: 0, french: 0, collie: 0 };
+
 // Question bank
 const questions = [
+    // Question 1
     {
         question: "Why do you want a dog?",
         answers: {
@@ -61,16 +66,31 @@ const questions = [
             B: "To protect my home.",
             C: "To pick up girls / guys at the dog park.",
             D: "To do work at a farm",
+        },
+        points: {
+            A: { beagle: 5, corgi: 3, american: 5, golden: 8, labrador: 8, bulldog: 5 },
+            B: { german: 8, bernese: 5, husky: 5 },
+            C: { corgi: 8, beagle: 5, golden: 8, american: 5, bulldog: 5, french: 5, stzu: 3  },
+            D: { husky: 100, collie: 100, german: 100, spaniel: 100, bernese: 100 },
         }
     },
+    // Question 2
     {
         question: "How large do you want your dog to be?",
         answers: {
             A: "I want a very small dog.",
-            B: "I want a medium size dog.",
-            C: "I want a big dog that weighs more than 50 lbs / 22 kilos.",
-        }
+            B: "I want a small dog.",
+            C: "I want a medium size dog.",
+            D: "I want a big dog that weighs more than 50 lbs / 22 kilos.",
+        },
+        points: {
+            A: { stzu: 80, havanese: 80 },
+            B: { terrier: 80, beagle: 80, french: 80, corgi: 80 },
+            C: { american: 80, golden: 80, spaniel: 80, bulldog: 80, husky: 80, collie: 80 },
+            D: { bernese: 80, labrador: 80, german: 80 },
+        },
     },
+    // Question 3
     {
         question: "Q",
         answers: {
@@ -78,8 +98,15 @@ const questions = [
             B: "",
             C: "",
             D: ""
-        }
+        },
+        points: {
+            A: {  },
+            B: {  },
+            C: {  },
+            D: {  },
+        },
     },
+    // Question 4
     {
         question: "Q",
         answers: {
@@ -87,8 +114,15 @@ const questions = [
             B: "",
             C: "",
             D: ""
-        }
+        },
+        points: {
+            A: {  },
+            B: {  },
+            C: {  },
+            D: {  },
+        },
     },
+    // Question 5
     {
         question: "Q",
         answers: {
@@ -96,8 +130,14 @@ const questions = [
             B: "",
             C: "",
             D: ""
-        }
-    }
+        },
+        points: {
+            A: {  },
+            B: {  },
+            C: {  },
+            D: {  },
+        },
+    },
 ];
 
 // Display quiz
