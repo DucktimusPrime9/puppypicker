@@ -54,7 +54,7 @@ const quizContainer = document.getElementById("quiz");
 const resultsContainer = document.getElementById("results");
 const submitButton = document.getElementById("submit");
 
-var scores = { corgi: 0, bernese: 0, german: 0, stzu: 0, american: 0, golden: 0, terrier: 0, labrador: 0, beagle: 0, havanese: 0, spaniel: 0, bulldog: 0, husky: 0, french: 0, collie: 0 };
+var scores = { corgi: 0, bernese: 0, german: 0, stzu: 0, american: 0, golden: 0, terrier: 0, labrador: 0, beagle: 0, havanese: 0, spaniel: 0, bulldog: 0, husky: 0, french: 0, collie: 0, mixed: 0 };
 
 // Question bank
 const questions = [
@@ -92,34 +92,31 @@ const questions = [
     },
     // Question 3
     {
-        question: "Q",
+        question: "Would you like your dog to be a purebred?",
         answers: {
-            A: "",
-            B: "",
-            C: "",
-            D: ""
+            A: "Yes, I want a purebred dog.",
+            B: "No, mixed breed dogs are fine with me!",
         },
         points: {
-            A: {  },
-            B: {  },
-            C: {  },
-            D: {  },
+            A: { mixed: -1, },
+            B: { mixed: 1000 },
         },
     },
     // Question 4
     {
-        question: "Q",
+        question: "How large is your living space?",
         answers: {
-            A: "",
-            B: "",
-            C: "",
-            D: ""
+            A: "I live in an apartment, with no easy access to outdoor space.",
+            B: "I live in an apartment with with relatively easily accessible outdoor space (ie, dog park close by).",
+            C: "I live in a house/apartment, with easy access to outdoor space.",
+            D: "I live on a farm or other place with a very large amount of open space."
         },
+        // corgi: 0, bernese: 0, german: 0, stzu: 0, american: 0, golden: 0, terrier: 0, labrador: 0, beagle: 0, havanese: 0, spaniel: 0, bulldog: 0, husky: 0, french: 0, collie: 0, mixed: 0
         points: {
-            A: {  },
-            B: {  },
-            C: {  },
-            D: {  },
+            A: { stzu: 13, havanese: 13 },
+            B: { corgi: 5, havanese: 5, stzu: 5, beagle: 5, bulldog: 5, terrier: 5 },
+            C: { german: 3, american: 3, golden: 3, labrador: 3, spaniel: 3, bernese: 3 },
+            D: { husky: 5, collie: 8, spaniel: 5, german: 8 },
         },
     },
     // Question 5
