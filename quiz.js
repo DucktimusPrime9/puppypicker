@@ -107,9 +107,9 @@ const questions = [
         question: "How large is your living space?",
         answers: {
             A: "I live in an apartment, with no easy access to outdoor space.",
-            B: "I live in an apartment with with relatively easily accessible outdoor space (ie, dog park close by).",
+            B: "I live in an apartment, with with easily accessible outdoor space.",
             C: "I live in a house/apartment, with easy access to outdoor space.",
-            D: "I live on a farm or other place with a very large amount of open space."
+            D: "I live on a farm or estate with a very large amount of open space."
         },
         // corgi: 0, bernese: 0, german: 0, stzu: 0, american: 0, golden: 0, terrier: 0, labrador: 0, beagle: 0, havanese: 0, spaniel: 0, bulldog: 0, husky: 0, french: 0, collie: 0, mixed: 0
         points: {
