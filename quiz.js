@@ -40,9 +40,9 @@
             const pointContainers = quizContainer.querySelectorAll(".points");
             const scoreContainers = pointContainers[userAnswer];
 
-            // for (breed key in scoreContainers) {
-            //     scores[breed] += scoreContainers[breed];
-            // }
+            for (breed key in scoreContainers) {
+                 scores[breed] += scoreContainers[breed];
+            }
 
 
             }
@@ -123,10 +123,10 @@ const questions = [
     {
         question: "Q",
         answers: {
-            A: "",
-            B: "",
-            C: "",
-            D: ""
+            A: "1",
+            B: "2",
+            C: "3",
+            D: "4"
         },
         points: {
             A: {  },
