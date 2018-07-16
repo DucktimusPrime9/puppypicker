@@ -1,4 +1,5 @@
 (function() {
+
     // Functions
     function buildQuiz() {
         const output = [];
@@ -6,8 +7,9 @@
         // Loop through each question
         questions.forEach((currentQuestion, questionNumber) => {
                 const answers = [];
+
                 // Add radio button to each question's answer
-                for(letter in currentQuestion.answers){
+                for(letter in currentQuestion.answers) {
                     answers.push(
                         `<label>
                             <input type="radio" name="question${questionNumber}" value="${letter}">
@@ -24,15 +26,18 @@
                 );
             }
         );
+
         // Put output to HTML page
         quizContainer.innerHTML = output.join("");
     }
 
     function showResults() {
+
         // Get answer containers from quiz
         const answerContainers = quizContainer.querySelectorAll(".answers");
 
         questions.forEach((currentQuestion, questionNumber) => {
+
             // Find selected answer
             const answerContainer = answerContainers[questionNumber];
             const selector = `input[name=question${questionNumber}]:checked`;
@@ -40,10 +45,9 @@
             const pointContainers = quizContainer.querySelectorAll(".points");
             const scoreContainers = pointContainers[userAnswer];
 
-            for (breed key in scoreContainers) {
+            for (breed_key in scoreContainers) {
                  scores[breed] += scoreContainers[breed];
             }
-
 
             }
         );
@@ -58,6 +62,7 @@ var scores = { corgi: 0, bernese: 0, german: 0, stzu: 0, american: 0, golden: 0,
 
 // Question bank
 const questions = [
+
     // Question 1
     {
         question: "Why do you want a dog?",
@@ -74,6 +79,7 @@ const questions = [
             D: { husky: 100, collie: 100, german: 100, spaniel: 100, bernese: 100 },
         }
     },
+
     // Question 2
     {
         question: "How large do you want your dog to be?",
@@ -90,7 +96,25 @@ const questions = [
             D: { bernese: 80, labrador: 80, german: 80 },
         },
     },
+
     // Question 3
+    {
+        question: "Pick an adjective that you want to describe your dog?",
+        answers: {
+            A: "Cute",
+            B: "Smart",
+            C: "Friendly",
+            D: "Strong"
+        },
+        points: {
+            A: { corgi: 8, havanese: 8, stzu: 8, terrier: 5, french: 8 },
+            B: { collie: 8, spaniel: 5, german: 5, american: 5 },
+            C: { labrador: 8, golden: 13, beagle: 5 },
+            D: { bernese: 8, bulldog: 3, husky: 5 },
+        },
+    },
+
+    // Question 4
     {
         question: "Would you like your dog to be a purebred?",
         answers: {
@@ -98,11 +122,12 @@ const questions = [
             B: "No, mixed breed dogs are fine with me!",
         },
         points: {
-            A: { mixed: -1, },
+            A: { mixed: -1 },
             B: { mixed: 1000 },
         },
     },
-    // Question 4
+
+    // Question 5
     {
         question: "How large is your living space?",
         answers: {
@@ -111,30 +136,14 @@ const questions = [
             C: "I live in a house/apartment, with easy access to outdoor space.",
             D: "I live on a farm or estate with a very large amount of open space."
         },
-        // corgi: 0, bernese: 0, german: 0, stzu: 0, american: 0, golden: 0, terrier: 0, labrador: 0, beagle: 0, havanese: 0, spaniel: 0, bulldog: 0, husky: 0, french: 0, collie: 0, mixed: 0
         points: {
             A: { stzu: 13, havanese: 13 },
-            B: { corgi: 5, havanese: 5, stzu: 5, beagle: 5, bulldog: 5, terrier: 5 },
+            B: { corgi: 5, havanese: 5, stzu: 5, beagle: 5, french: 5, terrier: 5 },
             C: { german: 3, american: 3, golden: 3, labrador: 3, spaniel: 3, bernese: 3 },
             D: { husky: 5, collie: 8, spaniel: 5, german: 8 },
         },
     },
-    // Question 5
-    {
-        question: "Q",
-        answers: {
-            A: "1",
-            B: "2",
-            C: "3",
-            D: "4"
-        },
-        points: {
-            A: {  },
-            B: {  },
-            C: {  },
-            D: {  },
-        },
-    },
+
 ];
 
 // Display quiz
