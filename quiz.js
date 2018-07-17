@@ -182,22 +182,22 @@
 
         switch (best)
         {
-            case 'corgi' : window.location.replace("https://www.akc.org/dog-breeds/pembroke-welsh-corgi/")
-            case 'bernese' : window.location.replace("https://www.akc.org/dog-breeds/bernese-mountain-dog/")
-            case 'german' : window.location.replace("https://www.akc.org/dog-breeds/german-shepherd-dog/")
-            case 'stzu' : window.location.replace("https://www.akc.org/dog-breeds/shih-tzu/")
-            case 'american' : window.location.replace("https://www.akc.org/dog-breeds/miniature-american-shepherd/")
-            case 'golden' : window.location.replace("https://www.akc.org/dog-breeds/golden-retriever/")
-            case 'terrier' : window.location.replace("https://www.akc.org/dog-breeds/boston-terrier/")
-            case 'labrador' : window.location.replace("https://www.akc.org/dog-breeds/labrador-retriever/")
-            case 'beagle' : window.location.replace("https://www.akc.org/dog-breeds/beagle/")
-            case 'havanese' : window.location.replace("https://www.akc.org/dog-breeds/havanese/")
-            case 'spaniel' : window.location.replace("https://www.akc.org/dog-breeds/english-springer-spaniel/")
-            case 'bulldog' : window.location.replace("https://www.akc.org/dog-breeds/bulldog/")
-            case 'husky' : window.location.replace("https://www.akc.org/dog-breeds/siberian-husky/")
-            case 'french' : window.location.replace("https://www.akc.org/dog-breeds/french-bulldog/")
-            case 'collie' : window.location.replace("https://www.akc.org/dog-breeds/border-collie/")
-            case 'mixed' : window.location.replace("https://www.akc.org/register/information/canine-partners/")
+            case "corgi" : window.location.replace("https://www.akc.org/dog-breeds/pembroke-welsh-corgi/"); break;
+            case "bernese" : window.location.replace("https://www.akc.org/dog-breeds/bernese-mountain-dog/"); break;
+            case "german" : window.location.replace("https://www.akc.org/dog-breeds/german-shepherd-dog/"); break;
+            case "stzu" : window.location.replace("https://www.akc.org/dog-breeds/shih-tzu/"); break;
+            case "american" : window.location.replace("https://www.akc.org/dog-breeds/miniature-american-shepherd/"); break;
+            case "golden" : window.location.replace("https://www.akc.org/dog-breeds/golden-retriever/"); break;
+            case "terrier" : window.location.replace("https://www.akc.org/dog-breeds/boston-terrier/"); break;
+            case "labrador" : window.location.replace("https://www.akc.org/dog-breeds/labrador-retriever/"); break;
+            case "beagle" : window.location.replace("https://www.akc.org/dog-breeds/beagle/"); break;
+            case "havanese" : window.location.replace("https://www.akc.org/dog-breeds/havanese/"); break;
+            case "spaniel" : window.location.replace("https://www.akc.org/dog-breeds/english-springer-spaniel/"); break;
+            case "bulldog" : window.location.replace("https://www.akc.org/dog-breeds/bulldog/"); break;
+            case "husky" : window.location.replace("https://www.akc.org/dog-breeds/siberian-husky/"); break;
+            case "french" : window.location.replace("https://www.akc.org/dog-breeds/french-bulldog/"); break;
+            case "collie" : window.location.replace("https://www.akc.org/dog-breeds/border-collie/"); break;
+            default : window.location.replace("https://www.akc.org/register/information/canine-partners/"); break;
         }
     }
 
