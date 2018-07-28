@@ -35,13 +35,13 @@
 
         // Get answer containers from quiz
         const answerContainers = quizContainer.querySelectorAll(".answers");
-        var scores = { corgi: 0, bernese: 0, german: 0, stzu: 0, american: 0, golden: 0, terrier: 0, labrador: 0, beagle: 0, havanese: 0, spaniel: 0, bulldog: 0, husky: 0, french: 0, collie: 0, mixed: 0 };
+        let scores = { corgi: 0, bernese: 0, german: 0, stzu: 0, american: 0, golden: 0, terrier: 0, labrador: 0, beagle: 0, havanese: 0, spaniel: 0, bulldog: 0, husky: 0, french: 0, collie: 0, mixed: 0 };
 
         questions.forEach((currentQuestion, questionNumber) => {
             const userAnswer = (answerContainers[questionNumber].querySelector(`input[name=question${questionNumber}]:checked`) || {}).value;
 
-            if (questionNumber==0) {
-                if (userAnswer==='A') {
+            if (questionNumber === 0) {
+                if (userAnswer === 'A') {
                     scores.corgi += 3;
                     scores.american += 5;
                     scores.golden += 8;
@@ -72,7 +72,7 @@
                 }
             }
 
-            else if (questionNumber==1) {
+            else if (questionNumber === 1) {
                 if (userAnswer==='A') {
                     scores.stzu += 80;
                     scores.havanese += 80;
@@ -98,8 +98,8 @@
                 }
             }
 
-            else if (questionNumber==2) {
-                if (userAnswer==='A') {
+            else if (questionNumber === 2) {
+                if (userAnswer === 'A') {
                     scores.corgi += 8;
                     scores.havanese += 8;
                     scores.stzu += 8;
@@ -124,8 +124,8 @@
                 }
             }
 
-            else if (questionNumber==3) {
-                if (userAnswer==='A') {
+            else if (questionNumber === 3) {
+                if (userAnswer === 'A') {
                     scores.mixed += 0;
                 }
                 else {
@@ -134,31 +134,31 @@
             }
 
             else {
-                if (userAnswer==='A') {
-                    scores.stzu += 13
-                    scores.havanese += 13
+                if (userAnswer === 'A') {
+                    scores.stzu += 13;
+                    scores.havanese += 13;
                 }
                 else if (userAnswer === 'B') {
-                    scores.corgi += 5
-                    scores.havanese += 5
-                    scores.stzu += 5
-                    scores.beagle += 5
-                    scores.french += 5
-                    scores.terrier += 5
+                    scores.corgi += 5;
+                    scores.havanese += 5;
+                    scores.stzu += 5;
+                    scores.beagle += 5;
+                    scores.french += 5;
+                    scores.terrier += 5;
                 }
                 else if (userAnswer === 'C') {
-                    scores.german += 3
-                    scores.american += 3
-                    scores.golden += 3
-                    scores.labrador += 3
-                    scores.spaniel += 3
-                    scores.bernese += 3
+                    scores.german += 3;
+                    scores.american += 3;
+                    scores.golden += 3;
+                    scores.labrador += 3;
+                    scores.spaniel += 3;
+                    scores.bernese += 3;
                 }
                 else {
-                    scores.husky += 5
-                    scores.collie += 8
-                    scores.spaniel += 5
-                    scores.german += 8
+                    scores.husky += 5;
+                    scores.collie += 8;
+                    scores.spaniel += 5;
+                    scores.german += 8;
                 }
             }
         }
@@ -168,9 +168,9 @@
         check each score for highest
         redirect using
         */
-        var max = 0;
-        var best = "";
-        for (var key in scores) {
+        let max = 0;
+        let best = "";
+        for (let key in scores) {
             if (scores[key] > max)
             {
                 max = scores[key];
@@ -238,7 +238,7 @@
                 A: "Cute",
                 B: "Smart",
                 C: "Friendly",
-                D: "Strong"
+                D: "Strong",
             },
         },
 
@@ -258,7 +258,7 @@
                 A: "I live in an apartment, with no easy access to outdoor space.",
                 B: "I live in an apartment, with with easily accessible outdoor space.",
                 C: "I live in a house/apartment, with easy access to outdoor space.",
-                D: "I live on a farm or estate with a very large amount of open space."
+                D: "I live on a farm or estate with a very large amount of open space.",
             },
         },
 
