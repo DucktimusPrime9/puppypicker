@@ -180,6 +180,7 @@
 
         console.log(scores);
 
+        // Result redirects
         switch (best)
         {
             case "corgi" : window.location.replace("https://www.akc.org/dog-breeds/pembroke-welsh-corgi/"); break;
@@ -197,6 +198,7 @@
             case "husky" : window.location.replace("https://www.akc.org/dog-breeds/siberian-husky/"); break;
             case "french" : window.location.replace("https://www.akc.org/dog-breeds/french-bulldog/"); break;
             case "collie" : window.location.replace("https://www.akc.org/dog-breeds/border-collie/"); break;
+            case "mixed" : window.location.replace("https://www.boredpanda.com/mixed-breed-dogs/"); break;
             default : window.location.replace("https://www.akc.org/register/information/canine-partners/"); break;
         }
     }
