@@ -165,16 +165,24 @@
         );
         /*
         for loop of 16
-        check each score for highest
-        redirect using
+        check each score for three highest
+        redirect using replacement
         */
-        let max = 0;
-        let best = "";
-        for (let key in scores) {
+
+        var max = 0;
+        var one = 0;
+        var two = 0;
+        var three = 0;
+
+
+        for (var key in scores)
+        {
             if (scores[key] > max)
             {
                 max = scores[key];
-                best = key;
+                three = two;
+                two = one;
+                one = key;
             }
         }
 
