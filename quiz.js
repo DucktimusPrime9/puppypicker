@@ -163,25 +163,43 @@
             }
         }
         );
-        /*
-        for loop of 16
-        check each score for highest
-        redirect using
-        */
-        let max = 0;
-        let best = "";
-        for (let key in scores) {
-            if (scores[key] > max)
-            {
-                max = scores[key];
-                best = key;
+
+                var one = 0;
+        var two = 0;
+        var three = 0;
+        var breed1 = ""
+        var breed2 = ""
+        var breed3 = ""
+
+
+        for (var key in scores)
+        {
+            if (scores[key] > one) {
+            	one = scores[key];
+        		breed1 = key;
             }
+
+            else if (scores[key] > two)
+            {
+            	two = scores[key];
+            	breed2 = key;
+            }
+
+        	else if (scores[key] > three)
+        	{
+        		three = scores[key];
+        		breed3 = key
+        	}
+
+        	else
+        	{
+        		continue;
+        	}
         }
 
-        console.log(scores);
+        console.log("The breeds which are best for you are: "+breed1+", "+breed2+", "+breed3+", ")
 
-        // Result redirects
-        switch (best)
+        switch (breed1)
         {
             case "corgi" : window.location.replace("https://www.akc.org/dog-breeds/pembroke-welsh-corgi/"); break;
             case "bernese" : window.location.replace("https://www.akc.org/dog-breeds/bernese-mountain-dog/"); break;
